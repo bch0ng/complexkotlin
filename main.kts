@@ -5,7 +5,20 @@ println("UW Complex Kotlin homework")
 // use fold to compress the array of strings down into a single string
 // the final string should look like FIZZBUZZFIZZFIZZBUZZFIZZFIZZBUZZ
 //
-val mapFoldResults = ""
+val mapFoldResults = (1..15).map{
+    n -> if (n % 3 == 0)
+            if (n % 5 == 0)
+                "FIZZBUZZ"
+            else
+                "FIZZ"
+        else if (n % 5 == 0)
+            "BUZZ"
+        else
+            ""
+}.fold("", { result, next -> result + next })
+
+
+
 
 
 // This is a utility function for your use as you choose, and as an
